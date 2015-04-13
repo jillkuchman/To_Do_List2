@@ -3,18 +3,14 @@ $(document).ready(function() {
         event.preventDefault();
 
         var task = $("input#new-task").val();
-        var is_completed = false;
-        var newTask = {taskname: task, status: is_completed};
 
-        $("ol#tasks").append("<li class='list-item'><span class='task'>" + newTask.taskname +"</span></li>");
-
-
+        $("ul#tasks").append("<li><span class='task'>" + task +"</span></li>");
 
         $(".task").last().click(function() {
-            $(this).toggleClass('donetask');
+            $(this).hide();
+            $("ul#completed-tasks").append("<li>"+ task + "</li>");
         });
 
         $("input#new-task").val("");
-
     });
 });
