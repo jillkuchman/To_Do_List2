@@ -1,3 +1,8 @@
 ul {
     list-style-type: none;
 }
+
+.task:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
